@@ -28,7 +28,7 @@
   - 세일링 클럽 공식 홈페이지: https://sc-signaturephuquoc.com/ko/%ED%99%88/
 - 미정: 환갑 디너 날짜·장소, 액티비티, 맛집 (맛집·액티비티는 사용자 요청으로 공란 유지 — 내용 받기 전엔 채우지 말 것)
 - 주요 컴포넌트: 스플릿플랩 항공 보드(히어로, `data-flap`), 타임라인 아코디언(일정), 숙소 카드 + 포토 갤러리 라이트박스
-- 스크립트 하단 `GALLERIES` 객체 — 숙소별 사진 URL 배열(`bareka` 10장: 모던 트리플룸 사진 먼저, `sailing` 7장: 아고다에 "2-Bedroom Signature Deluxe Pool Villa"(roomid 805419770)로 등록된 사진만). 카드의 `data-gallery="키"`와 같은 키로 연결
+- 스크립트 하단 `GALLERIES` 객체 — 숙소별 사진 URL 배열(`bareka` 13장: 아고다에 "Modern Triple Room"(roomid 1375527041)로 등록된 사진만, `sailing` 7장: 아고다에 "2-Bedroom Signature Deluxe Pool Villa"(roomid 805419770)로 등록된 사진만). 카드의 `data-gallery="키"`와 같은 키로 연결
 
 ## 알려진 이슈 / TODO
 1. 환갑 디너·액티비티·맛집 콘텐츠 미정 — [docs/ROADMAP.md](docs/ROADMAP.md) 참고.
