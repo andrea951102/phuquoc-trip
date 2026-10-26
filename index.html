@@ -910,6 +910,11 @@
         <div class="content">
           <span class="kicker">임시 숙소 · 01.20–21 · 1박</span>
           <h3>바레카 호텔<br><span style="font-size:.7em; color:var(--ink-faint); font-family:'Gowun Dodum','Manrope';">Bareka Hotel</span></h3>
+          <div class="gallery-row" data-gallery="bareka">
+            <div class="gallery-thumb"><img alt="바레카 호텔 사진 1" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+            <div class="gallery-thumb"><img alt="바레카 호텔 사진 2" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+            <div class="gallery-thumb more" data-more="더보기"><img alt="바레카 호텔 사진 3" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          </div>
           <div class="meta"><span>1박</span><span>모던 트리플룸</span><span>밤 도착 후 휴식용</span></div>
           <p class="desc">22:15에 도착해서 첫날 밤만 묵는 숙소예요. 객실은 <strong>모던 트리플룸(Modern Triple Room)</strong>으로 잡을 예정이에요. 다음 날 체크아웃하고 세일링 클럽으로 넘어가요.</p>
           <a class="link-btn" href="https://www.agoda.com/ko-kr/bareka-hotel-h87924416/hotel/phu-quoc-island-vn.html?checkin=2027-01-20&los=1" target="_blank" rel="noopener">
@@ -924,6 +929,11 @@
         <div class="content">
           <span class="kicker">메인 숙소 · 01.21–24 · 3박</span>
           <h3>세일링 클럽 시그니처 리조트 푸꾸옥<br><span style="font-size:.7em; color:var(--ink-faint); font-family:'Gowun Dodum','Manrope';">Sailing Club Signature Resort Phu Quoc</span></h3>
+          <div class="gallery-row" data-gallery="sailing">
+            <div class="gallery-thumb"><img alt="세일링 클럽 사진 1" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+            <div class="gallery-thumb"><img alt="세일링 클럽 사진 2" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+            <div class="gallery-thumb more" data-more="더보기"><img alt="세일링 클럽 사진 3" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          </div>
           <div class="meta"><span>3박</span><span>롱비치</span><span>4명</span></div>
           <p class="desc">롱비치 해변에 있는 리조트예요. 여행의 대부분을 여기서 보내면서 환갑 기념 시간도 보낼 예정이에요.</p>
           <a class="link-btn" href="https://www.agoda.com/ko-kr/sailing-club-signature-resort-phu-quoc/hotel/phu-quoc-island-vn.html?checkin=2027-01-21&los=3&rooms=1&adults=4" target="_blank" rel="noopener">
@@ -1216,8 +1226,32 @@
     document.getElementById('area-chips').innerHTML = d.chips.map(function(c){ return '<span>'+c+'</span>'; }).join('');
   });
 
-  /* photo gallery lightbox — add per-card photo URL arrays here, keyed by data-gallery */
-  var GALLERIES = {};
+  /* photo gallery lightbox — real photos hotlinked from Agoda's image CDN, keyed by data-gallery */
+  var GALLERIES = {
+    bareka: [
+      'https://pix8.agoda.net/hotelImages/87924416/1375527041/cedaf0090acea6c5b5a3f33350180af4.jpg?ce=3&s=1024x768',
+      'https://pix8.agoda.net/hotelImages/87924416/1375527041/dd0acbd8e62ea2fd1a28f10e505ea025.png?ce=3&s=1024x768',
+      'https://pix8.agoda.net/hotelImages/87924416/0/ed8ae4c9d884592a1d1fdec43732dc98.png?ce=3&s=1024x768',
+      'https://pix8.agoda.net/hotelImages/87924416/0/180017ab39b7ef29e68cd6d14a62334e.png?ce=3&s=1024x768',
+      'https://pix8.agoda.net/hotelImages/87924416/0/0754945e494475bdb51eb2acac0b395c.jpg?ce=3&s=1024x768',
+      'https://pix8.agoda.net/hotelImages/87924416/0/77440d34794dbd7a50ded9b5d289d107.png?ce=3&s=1024x768',
+      'https://pix8.agoda.net/hotelImages/87924416/0/26345f3a29878cb315fa62091a9bea46.png?ce=3&s=1024x768',
+      'https://pix8.agoda.net/hotelImages/87924416/0/bd78002599d751cb5fd5baacceaf83a8.png?ce=3&s=1024x768',
+      'https://pix8.agoda.net/hotelImages/87924416/0/ab7534b95b52715465effcbf137af9ce.jpg?ce=3&s=1024x768',
+      'https://pix8.agoda.net/hotelImages/87924416/0/eb650f68fa176504a71f4219261ea01b.jpg?ce=3&s=1024x768'
+    ],
+    sailing: [
+      'https://pix8.agoda.net/hotelImages/31187083/0/3815310b47b16ff71ee1a52b59181245.jpeg?ce=2&s=1024x768',
+      'https://pix8.agoda.net/property/31187083/0/11f8ff279f788e14b6e541dd3783dbb6.jpeg?s=1024x768',
+      'https://pix8.agoda.net/hotelImages/31187083/0/d3e8ed5b02c41ed8ed8f542908f7f928.jpeg?ce=2&s=1024x768',
+      'https://pix8.agoda.net/property/31187083/0/123f9cd0b4597ad4ace68ccd2b54d69b.jpeg?ce=3&s=1024x768',
+      'https://pix8.agoda.net/property/31187083/0/c07b9cef20e055a48a0b9eeacc3fb3e0.jpeg?s=1024x768',
+      'https://pix8.agoda.net/property/31187083/0/0858111d89bba5d675a04b9798dc6fdf.jpeg?ce=3&s=1024x768',
+      'https://pix8.agoda.net/hotelImages/31187083/496862551/d499e80955263473c9f6e933cb50224d.jpeg?ce=2&s=1024x768',
+      'https://pix8.agoda.net/property/31187083/0/80992f962eff2587fa96f3ff139c39eb.jpeg?s=1024x768',
+      'https://pix8.agoda.net/property/31187083/0/1842fb70e58abee8a855b7d151f702f5.jpeg?s=1024x768'
+    ]
+  };
 
   var lb = document.getElementById('lightbox');
   var lbImg = document.getElementById('lightbox-img');

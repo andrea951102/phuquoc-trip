@@ -25,11 +25,11 @@
   - 숙소: 바레카 호텔(Bareka Hotel, 임시) 01.20–21 1박 · 모던 트리플룸 → 세일링 클럽 시그니처 리조트 푸꾸옥(롱비치) 01.21–24 3박
 - 미정: 환갑 디너 날짜·장소, 액티비티 선택, 맛집
 - 주요 컴포넌트: 스플릿플랩 항공 보드(히어로, `data-flap`), 타임라인 아코디언(일정), 숙소 카드 + 포토 갤러리 라이트박스
-- 스크립트 하단 `GALLERIES` 객체 — 현재 비어 있음. 카드에 `data-gallery="키"` 갤러리 행을 넣고 여기에 같은 키로 사진 URL 배열을 추가하면 동작
+- 스크립트 하단 `GALLERIES` 객체 — 숙소별 사진 URL 배열(`bareka` 10장: 모던 트리플룸 사진 먼저, `sailing` 9장). 카드의 `data-gallery="키"`와 같은 키로 연결
 
 ## 알려진 이슈 / TODO
 1. 환갑 디너·액티비티·맛집 콘텐츠 미정 — [docs/ROADMAP.md](docs/ROADMAP.md) 참고.
-2. 숙소 사진 갤러리 없음 — 이 환경에서 Agoda 접속이 프록시에 막혀(403) 사진 URL을 못 가져옴. 사진 URL을 직접 받거나 다른 환경에서 추가.
+2. 숙소 사진은 Agoda CDN(`pix8.agoda.net`) 핫링크 — URL 만료 시 깨질 수 있음. 사진 목록은 Agoda API `https://www.agoda.com/api/cronos/property/BelowFoldParams/GetSecondaryData?hotel_id=<ID>`의 `mosaicInitData.images`에서 추출(바레카 87924416, 세일링 클럽 31187083). 클라우드 환경 "Pucuoc 2027"에 `www.agoda.com` 허용됨 — `pix8.agoda.net`은 컨테이너에서 아직 403이라 사진 로딩 자체는 여기서 육안 확인 불가.
 3. 미사용 `.resort-*` / `.opinion` / `.meter-*` / `.totals-*` CSS 규칙이 나트랑 시절부터 남아 있음(나중에 의견 블록 재사용 가능성 있어 보존).
 4. 사진을 넣게 되면 외부 CDN 핫링크는 만료될 수 있음 — 안정성 원하면 `images/`에 저장해 로컬 경로로.
 

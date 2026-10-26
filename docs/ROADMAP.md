@@ -13,8 +13,7 @@
 - `#food` 맛집 목록 — [docs/data/food-list.csv](data/food-list.csv)에 모아서 반영. 방식은 [docs/tasks/food-section.md](tasks/food-section.md)
 
 ## 다음 단계
-1. 숙소 사진 갤러리 추가 (사진 URL 확보 필요)
-2. 환갑 디너 장소 정해지면 일정·액티비티에 반영
-3. 액티비티 선택 → 일정 날짜별로 배치
+1. 환갑 디너 장소 정해지면 일정·액티비티에 반영
+2. 액티비티 선택 → 일정 날짜별로 배치
 
 세부 이력은 [PROGRESS.md](PROGRESS.md) 참고.
