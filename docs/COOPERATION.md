@@ -7,11 +7,11 @@
 - **Codex는 오버플로우**: Claude Code의 토큰/예산이 소진되어 남은 작업이 있을 때만 투입. 이 경우 설계는 Claude Code가 먼저 끝내두고, 실행 지시서를 `docs/handoff/`에 남겨서 Codex는 "실행만" 담당한다.
 
 ## 현재 진행 방식
-- 사용자는 Claude 데스크톱/웹 앱이 아니라 **Claude Code(CLI)**로 이 저장소에서 직접 작업하는 방식으로 2026-08-19부터 전환함.
+- 사용자는 **Claude Code**로 이 저장소에서 직접 작업한다 (나트랑 프로젝트에서 이어받은 방식).
 - 배포는 `git add && git commit && git push` → GitHub Pages 자동 재배포. GitHub 웹 UI "Upload files"는 더 이상 쓰지 않음.
 
 ## 최근 결정 사항
-- 2026-08-19: 기존 Claude 앱에서 쓰던 HANDOFF.md(수동 인수인계 문서)를 폐기하고, 이 저장소의 `docs/PROGRESS.md` + 프로젝트 `CLAUDE.md`로 인계 방식을 이전함.
+- 2026-10-26: `nhatrang-trip`에서 복제해 시작. 인계는 `docs/PROGRESS.md` + 프로젝트 `CLAUDE.md`로 한다.
 
 ## 에이전트 간 공유 규칙
 - 어떤 에이전트든 작업을 마치면 `docs/PROGRESS.md` 맨 위에 1건 기록 (무엇을·왜·다음 할 일).
