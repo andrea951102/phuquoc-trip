@@ -6,7 +6,7 @@
 ## 구조 (index.html 내부)
 - `<style>`: `:root` CSS 변수로 컬러 토큰 정의(`--ink`, `--paper`, `--coral`, `--gold`, `--teal`, `--sky` 등), 이후 컴포넌트별 클래스
 - `<body>`: 섹션 순서 — 히어로(#top) → `#about` → `#budget` → `#itinerary` → `#stay` → `#food` → `#activity` → footer → lightbox 모달
-- `<script>` (IIFE, 바닐라 JS): 스크롤 진행바, 탭 active 상태(IntersectionObserver), reveal 애니메이션, 타임라인 SVG 라인 드로잉, 날짜 아코디언, 스플릿플랩 항공 보드 애니메이션, 낮·밤 날씨/롱비치·북부·남부 토글, 포토 갤러리 라이트박스(`GALLERIES` 객체, 현재 비어 있음)
+- `<script>` (IIFE, 바닐라 JS): 스크롤 진행바, 탭 active 상태(IntersectionObserver), reveal 애니메이션, 타임라인 SVG 라인 드로잉, 날짜 아코디언, 스플릿플랩 항공 보드 애니메이션, 낮·밤 날씨 토글, 포토 갤러리 라이트박스(`GALLERIES` 객체, 현재 비어 있음)
 
 ## 외부 의존성
 - Google Fonts CDN (Jua, Gowun Dodum, Fraunces, JetBrains Mono) — 유일한 외부 리소스
